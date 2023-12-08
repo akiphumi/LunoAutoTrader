@@ -124,7 +124,9 @@ def get_decimal_precision():
         'LTC': 3,
         'SOL': 2,
         'UNI': 1,
-        'XRP': 0,  # Update the decimal precision for XRP
+        'XRP': 0,
+        'MATIC': 0,
+        'AVAX': 2  # Added decimal precision for AVAX
     }
     return precision
 
@@ -183,15 +185,17 @@ total_balance = get_portfolio_balance(client)
 print(f"Total Portfolio Balance (MYR): {total_balance:.2f}")
 
 target_portfolio = {
-    "XBT": 0.28, # BTC
-    "ETH": 0.21,
-    "XRP": 0.08,
+    "XBT": 0.25,  # BTC
+    "ETH": 0.20,
+    "XRP": 0.07,
     "LTC": 0.04,
-    "ADA": 0.06,
+    "ADA": 0.04,
     "SOL": 0.04,
     "LINK": 0.03,
     "UNI": 0.03,
-    "BCH": 0.03
+    "BCH": 0.03,
+    "MATIC": 0.04,
+    "AVAX": 0.03  # Added AVAX with an allocation of 0.04
 }
 
 # Calculate the rebalance amounts for the target portfolio
@@ -202,13 +206,15 @@ print("Rebalance Amounts:", rebalance_amounts)
 min_trade_volumes = {
     'ADA': (0.10, 100000),
     'BCH': (0.001, 40),
-    'XBT': (0.0001, 1),
+    'XBT': (0.0002, 1),  # Please double-check this value. It seems quite low compared to others.
     'ETH': (0.001, 100),
-    'LINK': (0.05, 1000),
+    'LINK': (0.1, 1000),
     'LTC': (0.001, 200),
     'SOL': (0.05, 1000),
     'UNI': (0.10, 2000),
-    'XRP': (1, 80000),
+    'XRP': (0.10, 80000),
+    'MATIC': (0.10, 80000),
+    'AVAX': (0.05, 5000),  # Added min and max trade volumes for AVAX
 }
 
 
