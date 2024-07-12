@@ -185,17 +185,17 @@ total_balance = get_portfolio_balance(client)
 print(f"Total Portfolio Balance (MYR): {total_balance:.2f}")
 
 target_portfolio = {
-    "XBT": 0.25,  # BTC
-    "ETH": 0.20,
-    "XRP": 0.07,
-    "LTC": 0.04,
-    "ADA": 0.04,
-    "SOL": 0.04,
-    "LINK": 0.03,
-    "UNI": 0.03,
-    "BCH": 0.03,
-    "MATIC": 0.04,
-    "AVAX": 0.03  # Added AVAX with an allocation of 0.04
+    "XBT": 0.248,  # BTC
+    "ETH": 0.184,
+    "XRP": 0.056,
+    "LTC": 0.024,
+    "ADA": 0.048,
+    "SOL": 0.072,
+    "LINK": 0.032,
+    "UNI": 0.032,
+    "BCH": 0.032,
+    "MATIC": 0.032,
+    "AVAX": 0.04  # Added AVAX with an allocation of 0.04
 }
 
 # Calculate the rebalance amounts for the target portfolio
